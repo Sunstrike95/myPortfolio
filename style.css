@@ -1,0 +1,433 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodyPage1 {
+  overflow: hidden;
+}
+
+.bodyPage2 {
+  overflow: hidden;
+}
+
+/* !Nav Bar */
+.topnav {
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+.topnav a {
+  float: right;
+  text-align: center;
+  padding: 14px 47px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover {
+  /* background-color: #ddd; */
+  color: black;
+}
+
+/* .topnav a.active {
+    
+    
+  } */
+
+/* !main Page Layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.1fr 1.6fr;
+  gap: 1em 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". MainHead ."
+    ". MainImg ."
+    ". Intro .";
+}
+
+.MainHead {
+  grid-area: MainHead;
+}
+
+.MainImg {
+  grid-area: MainImg;
+}
+
+.Intro {
+  grid-area: Intro;
+}
+
+/* ?Everything inside the Grid */
+
+h1.mainHeader {
+  font-size: 36px;
+  text-align: center;
+  margin: auto;
+  display: table;
+  text-shadow: 0 0 5px white;
+}
+
+h2 {
+  font-size: 33px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-shadow: 0 0 5px white;
+}
+
+h3 {
+  font-size: 23px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  
+}
+
+/* ?Image section */
+img.mainImg {
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  width: 330px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+/* ?Settings for the article section */
+article.mainArticle {
+  margin-top: 6rem;
+  margin: auto;
+  text-align: center;
+}
+
+p.intro {
+  font-size: 21px;
+}
+
+/* ?XXXXX */
+/* ! ABOUT PAGE  */
+/* ?XXXX */
+
+.container {
+  float: right;
+  margin-top: 8rem;
+  margin-right: 10rem;
+}
+
+.resume {
+  margin-left: -3rem;
+}
+
+
+
+
+article {
+  max-width: 50%;
+  padding-left: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+.Courses li {
+  margin-top: 1rem;
+}
+
+ul.Courses {
+  display: contents;
+}
+
+.fileIcon {
+  margin-left: 1rem;
+}
+
+
+
+/* ?Social media */
+.social {
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+}
+
+.social li {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.social li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.social li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.social li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.social li a:hover:before {
+  top: 0;
+}
+
+.social li:nth-child(1) a:before {
+  background: #3b5999;
+}
+
+.social li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+.social li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+.social li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+/* !Effects on headers  */
+
+.underline-effect {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* Change the color as desired */
+  transform: scaleX(0);
+  animation: underline-animation 5s ease-in-out forwards;
+}
+
+@keyframes underline-animation {
+  0% {
+      transform: scaleX(0);
+  }
+  100% {
+      transform: scaleX(1);
+  }
+}
+
+
+/* ?Causes the text to shake */
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-5px, 0); }
+  20% { transform: translate(5px, 0); }
+  30% { transform: translate(-5px, 0); }
+  40% { transform: translate(5px, 0); }
+  50% { transform: translate(-5px, 0); }
+  60% { transform: translate(5px, 0); }
+  70% { transform: translate(-5px, 0); }
+  80% { transform: translate(5px, 0); }
+  90% { transform: translate(-5px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake-text {
+  transition: transform 0.5s;
+}
+
+.shake-text:hover {
+  animation: shake 3s infinite;
+}
+
+/* ?Bounce in Effect */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce-in {
+  animation: bounce-in 3s;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 0 0 5px white, 0 0 10px lightblue;
+}
+
+/* ?Hover effects */
+a:hover {
+  color: white;
+}
+
